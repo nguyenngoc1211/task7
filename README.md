@@ -34,3 +34,7 @@ Truy cập trực tiếp → Trang chính.
 -RabbitMQ để xử lý message.
 
 3.Keycloak quản lý xác thực và tương tác với PostgreSQL để lưu trữ dữ liệu người dùng.
+
+Dưới đây là sơ đồ hoạt động :
+
+![Just a picture](https://imgur.com/v8ljvni)
