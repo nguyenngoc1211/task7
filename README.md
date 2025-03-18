@@ -37,4 +37,4 @@ Truy cập trực tiếp → Trang chính.
 
 Dưới đây là sơ đồ hoạt động :
 
-![Just a picture]([https://media.giphy.com/media/PiQejEf31116URju4V/giphy.gif](https://imgur.com/v8ljvni))
+![Just a picture](https://imgur.com/v8ljvni)
