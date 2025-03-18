@@ -45,7 +45,7 @@ services:
     ports:
       - "${KEYCLOAK_PORT}:8003"
     environment:
-      KC_HTTP_PORT: ${KC_HTTP_PORT}
+      KC_HTTP_PORT: ${KEYCLOAK_PORT}
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
     command: start-dev
@@ -88,11 +88,14 @@ services:
       - "${MEMCACHED_PORT}:11211"
 
   rabbitmq:
-    image: rabbitmq:latest
+    image: rabbitmq:3-management
     container_name: ${CONTAINER_PREFIX}rabbitmq
-    ports:
-      - "5672:5672"
-      - "15672:15672"
+  ports:
+    - "${RABBITMQ_PORT}:5672"
+    - "${RABBITMQ_MANAGEMENT_PORT}:15672"
+  environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
 
 volumes:
   postgres_data:
